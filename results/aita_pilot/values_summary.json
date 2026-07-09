@@ -1,0 +1,23 @@
+{
+  "vanilla": {
+    "n_mentions": 6914,
+    "top10_mass": 0.796,
+    "norm_entropy": 0.743,
+    "n_distinct_values": 45
+  },
+  "dmp": {
+    "n_mentions": 6994,
+    "top10_mass": 0.472,
+    "norm_entropy": 0.89,
+    "n_distinct_values": 55
+  },
+  "dmp_profile_adherence": 0.976,
+  "adherence_chance_baseline": "~0.16-0.24 (2-3 random values vs 5/59 profile)",
+  "reference_paper_a": {
+    "top10_mass_llm": 0.816,
+    "top10_mass_human": 0.352,
+    "entropy_llm": 0.46,
+    "entropy_human": 0.57,
+    "entropy_dmp": 0.52
+  }
+}

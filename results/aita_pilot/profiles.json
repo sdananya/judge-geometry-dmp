@@ -1,0 +1,162 @@
+[
+ {
+  "id": 0,
+  "values": {
+   "Marital Respect": 0.315,
+   "Pragmatism": 0.246,
+   "Punctuality": 0.195,
+   "Community": 0.17,
+   "Artistic Integrity": 0.075
+  }
+ },
+ {
+  "id": 1,
+  "values": {
+   "Resilience": 0.268,
+   "Individualism": 0.245,
+   "Animal Welfare": 0.176,
+   "Care": 0.157,
+   "Self-Actualization": 0.154
+  }
+ },
+ {
+  "id": 2,
+  "values": {
+   "Efficiency": 0.256,
+   "Thoughtfulness": 0.239,
+   "Cultural Respect": 0.184,
+   "Resilience": 0.167,
+   "Appreciation": 0.154
+  }
+ },
+ {
+  "id": 3,
+  "values": {
+   "Community": 0.244,
+   "Child Welfare": 0.232,
+   "Cultural Respect": 0.215,
+   "Freedom": 0.164,
+   "Parental Responsibility": 0.144
+  }
+ },
+ {
+  "id": 4,
+  "values": {
+   "Convenience": 0.36,
+   "Nonviolence": 0.254,
+   "Conformity": 0.149,
+   "Enjoyment": 0.126,
+   "Efficiency": 0.111
+  }
+ },
+ {
+  "id": 5,
+  "values": {
+   "Community": 0.267,
+   "Inclusivity": 0.239,
+   "Justice": 0.194,
+   "Belonging": 0.161,
+   "Family": 0.138
+  }
+ },
+ {
+  "id": 6,
+  "values": {
+   "Sensitivity": 0.253,
+   "Respect": 0.236,
+   "Solidarity": 0.207,
+   "Discipline": 0.157,
+   "Thoughtfulness": 0.147
+  }
+ },
+ {
+  "id": 7,
+  "values": {
+   "Knowledge": 0.349,
+   "Consideration": 0.189,
+   "Freedom": 0.168,
+   "Emotional Intelligence": 0.151,
+   "Marital Respect": 0.142
+  }
+ },
+ {
+  "id": 8,
+  "values": {
+   "Inclusivity": 0.295,
+   "Discipline": 0.202,
+   "Animal Welfare": 0.183,
+   "Care": 0.174,
+   "Respect": 0.145
+  }
+ },
+ {
+  "id": 9,
+  "values": {
+   "Aesthetics": 0.281,
+   "Stability": 0.231,
+   "Happiness": 0.217,
+   "Marital Respect": 0.146,
+   "Pragmatism": 0.125
+  }
+ },
+ {
+  "id": 10,
+  "values": {
+   "Harmony": 0.434,
+   "Tradition": 0.252,
+   "Property": 0.125,
+   "Individualism": 0.096,
+   "Knowledge": 0.093
+  }
+ },
+ {
+  "id": 11,
+  "values": {
+   "Artistic Integrity": 0.313,
+   "Respect for Time": 0.241,
+   "Child Welfare": 0.175,
+   "Enjoyment": 0.156,
+   "Appreciation": 0.115
+  }
+ },
+ {
+  "id": 12,
+  "values": {
+   "Responsibility": 0.517,
+   "Respect for Time": 0.201,
+   "Consideration": 0.141,
+   "Friendship": 0.075,
+   "Welfare": 0.065
+  }
+ },
+ {
+  "id": 13,
+  "values": {
+   "Aesthetics": 0.486,
+   "Conformity": 0.164,
+   "Pragmatism": 0.127,
+   "Marital Respect": 0.113,
+   "Self-Actualization": 0.11
+  }
+ },
+ {
+  "id": 14,
+  "values": {
+   "Individualism": 0.247,
+   "Responsibility": 0.195,
+   "Ethics": 0.195,
+   "Integrity": 0.185,
+   "Comfort": 0.179
+  }
+ },
+ {
+  "id": 15,
+  "values": {
+   "Loyalty": 0.268,
+   "Family": 0.244,
+   "Aesthetics": 0.228,
+   "Convenience": 0.169,
+   "Creativity": 0.091
+  }
+ }
+]
