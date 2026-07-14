@@ -50,6 +50,30 @@ specifies its principal-angle recipe; ours is fixed here before any experimental
 center per-column z-scores across items, subspace = span of top-k right singular vectors /
 score columns, angles via SVD of Q_Aᵀ·Q_B per Björck & Golub 1973).
 
+## Phase 2 pre-registration amendments (written 2026-07-14, BEFORE the Phase 2 runs)
+
+- **Conditions (150 dilemmas × 16 samples each, Claude Haiku, T=1):** vanilla /
+  dmp_empirical (Dirichlet(10·G0) with G0 fitted to values extracted from real AITA
+  commenter rationales) / dmp_uniform (pilot condition, G0 sensitivity) / shuffled_g0
+  (G0_emp permuted across values — keeps diversity mechanics, destroys human-informed
+  content) / random_persona (non-value personas, format- and token-matched to DMP
+  profiles) / diversity_instruction (vanilla + "reasonable people disagree; voice one
+  plausible human opinion").
+- **Deviation from original pre-registration:** the planned temperature-increase control is
+  infeasible — the Anthropic API caps temperature at 1.0 and vanilla already runs there.
+  The diversity_instruction condition replaces it as the non-value variance-inducer.
+- **Primary metric (H2): correlation between per-item mean judgment and human verdict
+  rates.** The ensemble span-angle is REPORTED but only interpreted against the
+  variance-matched controls (Phase 1 showed it mechanically favors noisier conditions).
+- **Inference:** paired item bootstrap, B=1000, 95% percentile CIs on condition deltas
+  (dmp_empirical − vanilla; dmp_empirical − random_persona; dmp_empirical − shuffled_g0).
+- **H3 verdict rule:** H3 is supported if dmp_empirical raises within-item variance by
+  ≥2× over vanilla while the primary correlation's 95% CI on (dmp − vanilla) includes 0;
+  genuine pluralism requires the correlation delta CI to exclude 0 AND exceed the
+  matched-variance controls' deltas.
+- **Rewrite fix:** the rewriter must always name the narrator "the main actor"; runs are
+  gated on ≥95% of rewrites passing the string check plus a 5-item hand-read.
+
 **Known measurement trap (pre-registered):** with ~32 judgments per side, the per-item
 |ΔP(acceptable)| metric has a noise floor of ~0.10 at 50/50 items even under PERFECT alignment.
 Every distributional result must be reported as excess above this analytic floor
