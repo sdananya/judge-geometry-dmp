@@ -1,0 +1,650 @@
+{
+ "dmp_empirical": [
+  {
+   "id": 0,
+   "values": {
+    "Self-Reliance": 0.329,
+    "Compassion": 0.238,
+    "Consideration": 0.186,
+    "Communication": 0.134,
+    "Discipline": 0.112
+   }
+  },
+  {
+   "id": 1,
+   "values": {
+    "Respect": 0.496,
+    "Autonomy": 0.162,
+    "Responsibility": 0.131,
+    "Ethics": 0.128,
+    "Integrity": 0.083
+   }
+  },
+  {
+   "id": 2,
+   "values": {
+    "Respect": 0.328,
+    "Compassion": 0.191,
+    "Consideration": 0.187,
+    "Integrity": 0.171,
+    "Emotional Intelligence": 0.123
+   }
+  },
+  {
+   "id": 3,
+   "values": {
+    "Autonomy": 0.262,
+    "Respect": 0.213,
+    "Child Welfare": 0.206,
+    "Pragmatism": 0.189,
+    "Care": 0.129
+   }
+  },
+  {
+   "id": 4,
+   "values": {
+    "Family": 0.283,
+    "Communication": 0.275,
+    "Integrity": 0.189,
+    "Autonomy": 0.16,
+    "Consideration": 0.093
+   }
+  },
+  {
+   "id": 5,
+   "values": {
+    "Safety": 0.345,
+    "Consideration": 0.328,
+    "Respect": 0.139,
+    "Responsibility": 0.102,
+    "Autonomy": 0.087
+   }
+  },
+  {
+   "id": 6,
+   "values": {
+    "Communication": 0.364,
+    "Family": 0.287,
+    "Responsibility": 0.162,
+    "Child Welfare": 0.114,
+    "Property": 0.074
+   }
+  },
+  {
+   "id": 7,
+   "values": {
+    "Respect": 0.358,
+    "Compassion": 0.216,
+    "Consideration": 0.198,
+    "Autonomy": 0.145,
+    "Care": 0.084
+   }
+  },
+  {
+   "id": 8,
+   "values": {
+    "Consideration": 0.332,
+    "Autonomy": 0.223,
+    "Responsibility": 0.175,
+    "Respect": 0.157,
+    "Property": 0.114
+   }
+  },
+  {
+   "id": 9,
+   "values": {
+    "Cultural Respect": 0.318,
+    "Safety": 0.202,
+    "Compassion": 0.186,
+    "Respect": 0.18,
+    "Care": 0.114
+   }
+  },
+  {
+   "id": 10,
+   "values": {
+    "Autonomy": 0.393,
+    "Pragmatism": 0.288,
+    "Family": 0.115,
+    "Integrity": 0.112,
+    "Responsibility": 0.092
+   }
+  },
+  {
+   "id": 11,
+   "values": {
+    "Child Welfare": 0.425,
+    "Communication": 0.168,
+    "Integrity": 0.165,
+    "Respect": 0.137,
+    "Care": 0.106
+   }
+  },
+  {
+   "id": 12,
+   "values": {
+    "Respect": 0.378,
+    "Responsibility": 0.236,
+    "Consideration": 0.151,
+    "Justice": 0.127,
+    "Family": 0.107
+   }
+  },
+  {
+   "id": 13,
+   "values": {
+    "Respect": 0.332,
+    "Autonomy": 0.253,
+    "Child Welfare": 0.151,
+    "Self-Actualization": 0.15,
+    "Responsibility": 0.113
+   }
+  },
+  {
+   "id": 14,
+   "values": {
+    "Integrity": 0.321,
+    "Responsibility": 0.291,
+    "Autonomy": 0.186,
+    "Child Welfare": 0.134,
+    "Community": 0.068
+   }
+  },
+  {
+   "id": 15,
+   "values": {
+    "Friendship": 0.296,
+    "Autonomy": 0.218,
+    "Justice": 0.2,
+    "Respect": 0.189,
+    "Communication": 0.098
+   }
+  }
+ ],
+ "dmp_uniform": [
+  {
+   "id": 0,
+   "values": {
+    "Self-Reliance": 0.363,
+    "Safety": 0.221,
+    "Emotional Intelligence": 0.153,
+    "Marital Respect": 0.146,
+    "Comfort": 0.117
+   }
+  },
+  {
+   "id": 1,
+   "values": {
+    "Curiosity": 0.246,
+    "Knowledge": 0.203,
+    "Communication": 0.201,
+    "Tranquility": 0.189,
+    "Inclusivity": 0.161
+   }
+  },
+  {
+   "id": 2,
+   "values": {
+    "Happiness": 0.234,
+    "Comfort": 0.213,
+    "Family": 0.202,
+    "Animal Welfare": 0.196,
+    "Responsibility": 0.155
+   }
+  },
+  {
+   "id": 3,
+   "values": {
+    "Sustainability": 0.388,
+    "Self-Reliance": 0.193,
+    "Ethics": 0.173,
+    "Tradition": 0.125,
+    "Autonomy": 0.12
+   }
+  },
+  {
+   "id": 4,
+   "values": {
+    "Property": 0.244,
+    "Parental Responsibility": 0.23,
+    "Thoughtfulness": 0.187,
+    "Community": 0.173,
+    "Self-Reliance": 0.167
+   }
+  },
+  {
+   "id": 5,
+   "values": {
+    "Individualism": 0.584,
+    "Family": 0.135,
+    "Care": 0.124,
+    "Resilience": 0.085,
+    "Harmony": 0.073
+   }
+  },
+  {
+   "id": 6,
+   "values": {
+    "Justice": 0.282,
+    "Belonging": 0.2,
+    "Consideration": 0.188,
+    "Curiosity": 0.178,
+    "Property": 0.152
+   }
+  },
+  {
+   "id": 7,
+   "values": {
+    "Inclusivity": 0.328,
+    "Ethics": 0.3,
+    "Appreciation": 0.223,
+    "Compassion": 0.08,
+    "Safety": 0.068
+   }
+  },
+  {
+   "id": 8,
+   "values": {
+    "Emotional Intelligence": 0.303,
+    "Ethics": 0.191,
+    "Community": 0.179,
+    "Compassion": 0.177,
+    "Care": 0.15
+   }
+  },
+  {
+   "id": 9,
+   "values": {
+    "Safety": 0.269,
+    "Loyalty": 0.237,
+    "Emotional Intelligence": 0.186,
+    "Self-Actualization": 0.184,
+    "Convenience": 0.124
+   }
+  },
+  {
+   "id": 10,
+   "values": {
+    "Ethics": 0.433,
+    "Conformity": 0.244,
+    "Thoughtfulness": 0.126,
+    "Freedom": 0.1,
+    "Pragmatism": 0.098
+   }
+  },
+  {
+   "id": 11,
+   "values": {
+    "Care": 0.48,
+    "Freedom": 0.257,
+    "Individualism": 0.117,
+    "Belonging": 0.077,
+    "Stability": 0.07
+   }
+  },
+  {
+   "id": 12,
+   "values": {
+    "Compassion": 0.343,
+    "Sustainability": 0.297,
+    "Nurturing": 0.123,
+    "Loyalty": 0.118,
+    "Child Welfare": 0.118
+   }
+  },
+  {
+   "id": 13,
+   "values": {
+    "Curiosity": 0.41,
+    "Inclusivity": 0.26,
+    "Consideration": 0.123,
+    "Welfare": 0.115,
+    "Cultural Respect": 0.092
+   }
+  },
+  {
+   "id": 14,
+   "values": {
+    "Justice": 0.307,
+    "Community": 0.228,
+    "Consideration": 0.177,
+    "Efficiency": 0.146,
+    "Child Welfare": 0.143
+   }
+  },
+  {
+   "id": 15,
+   "values": {
+    "Self-Reliance": 0.273,
+    "Well-being": 0.256,
+    "Ethics": 0.201,
+    "Forgiveness": 0.165,
+    "Nonviolence": 0.105
+   }
+  }
+ ],
+ "shuffled_g0": [
+  {
+   "id": 0,
+   "values": {
+    "Efficiency": 0.3,
+    "Discipline": 0.238,
+    "Well-being": 0.235,
+    "Forgiveness": 0.176,
+    "Tradition": 0.051
+   }
+  },
+  {
+   "id": 1,
+   "values": {
+    "Forgiveness": 0.436,
+    "Communication": 0.168,
+    "Comfort": 0.159,
+    "Discipline": 0.133,
+    "Well-being": 0.104
+   }
+  },
+  {
+   "id": 2,
+   "values": {
+    "Creativity": 0.259,
+    "Well-being": 0.25,
+    "Comfort": 0.247,
+    "Communication": 0.123,
+    "Safety": 0.122
+   }
+  },
+  {
+   "id": 3,
+   "values": {
+    "Discipline": 0.329,
+    "Efficiency": 0.278,
+    "Communication": 0.253,
+    "Solidarity": 0.084,
+    "Compassion": 0.056
+   }
+  },
+  {
+   "id": 4,
+   "values": {
+    "Communication": 0.275,
+    "Efficiency": 0.241,
+    "Well-being": 0.231,
+    "Discipline": 0.164,
+    "Appreciation": 0.09
+   }
+  },
+  {
+   "id": 5,
+   "values": {
+    "Efficiency": 0.242,
+    "Communication": 0.222,
+    "Appreciation": 0.215,
+    "Child Welfare": 0.185,
+    "Forgiveness": 0.137
+   }
+  },
+  {
+   "id": 6,
+   "values": {
+    "Solidarity": 0.583,
+    "Nurturing": 0.173,
+    "Conformity": 0.113,
+    "Comfort": 0.075,
+    "Punctuality": 0.055
+   }
+  },
+  {
+   "id": 7,
+   "values": {
+    "Efficiency": 0.307,
+    "Friendship": 0.272,
+    "Forgiveness": 0.214,
+    "Tranquility": 0.106,
+    "Appreciation": 0.101
+   }
+  },
+  {
+   "id": 8,
+   "values": {
+    "Communication": 0.546,
+    "Integrity": 0.187,
+    "Efficiency": 0.108,
+    "Respect for Time": 0.088,
+    "Consideration": 0.071
+   }
+  },
+  {
+   "id": 9,
+   "values": {
+    "Forgiveness": 0.342,
+    "Well-being": 0.24,
+    "Conformity": 0.203,
+    "Solidarity": 0.131,
+    "Discipline": 0.084
+   }
+  },
+  {
+   "id": 10,
+   "values": {
+    "Well-being": 0.472,
+    "Efficiency": 0.226,
+    "Communication": 0.169,
+    "Discipline": 0.073,
+    "Child Welfare": 0.06
+   }
+  },
+  {
+   "id": 11,
+   "values": {
+    "Communication": 0.397,
+    "Well-being": 0.276,
+    "Conformity": 0.139,
+    "Efficiency": 0.106,
+    "Curiosity": 0.083
+   }
+  },
+  {
+   "id": 12,
+   "values": {
+    "Efficiency": 0.293,
+    "Consideration": 0.282,
+    "Safety": 0.257,
+    "Tradition": 0.108,
+    "Tranquility": 0.06
+   }
+  },
+  {
+   "id": 13,
+   "values": {
+    "Conformity": 0.305,
+    "Punctuality": 0.276,
+    "Safety": 0.191,
+    "Justice": 0.128,
+    "Child Welfare": 0.099
+   }
+  },
+  {
+   "id": 14,
+   "values": {
+    "Compassion": 0.318,
+    "Happiness": 0.226,
+    "Communication": 0.157,
+    "Efficiency": 0.152,
+    "Safety": 0.147
+   }
+  },
+  {
+   "id": 15,
+   "values": {
+    "Communication": 0.384,
+    "Appreciation": 0.276,
+    "Forgiveness": 0.143,
+    "Efficiency": 0.111,
+    "Well-being": 0.085
+   }
+  }
+ ],
+ "random_persona": [
+  {
+   "id": 0,
+   "values": {
+    "Cooking": 0.364,
+    "Calligraphy": 0.184,
+    "Karaoke": 0.183,
+    "Archery": 0.158,
+    "Magic Tricks": 0.111
+   }
+  },
+  {
+   "id": 1,
+   "values": {
+    "Gourmet Coffee": 0.251,
+    "Yoga": 0.245,
+    "Swimming": 0.215,
+    "Skiing": 0.145,
+    "Surfing": 0.144
+   }
+  },
+  {
+   "id": 2,
+   "values": {
+    "Stamp Collecting": 0.376,
+    "Gardening": 0.17,
+    "Pottery": 0.159,
+    "Pilates": 0.151,
+    "Karaoke": 0.144
+   }
+  },
+  {
+   "id": 3,
+   "values": {
+    "Chess": 0.631,
+    "Podcasts": 0.121,
+    "Jazz Music": 0.108,
+    "Archery": 0.079,
+    "Cycling": 0.061
+   }
+  },
+  {
+   "id": 4,
+   "values": {
+    "Travel": 0.282,
+    "Cycling": 0.192,
+    "Antique Maps": 0.183,
+    "Astronomy Apps": 0.175,
+    "Chess": 0.168
+   }
+  },
+  {
+   "id": 5,
+   "values": {
+    "Crossword Puzzles": 0.251,
+    "Podcasts": 0.239,
+    "Swimming": 0.199,
+    "Typewriters": 0.169,
+    "Travel": 0.143
+   }
+  },
+  {
+   "id": 6,
+   "values": {
+    "Painting": 0.358,
+    "Bonsai": 0.249,
+    "Podcasts": 0.183,
+    "Urban Sketching": 0.106,
+    "Martial Arts": 0.103
+   }
+  },
+  {
+   "id": 7,
+   "values": {
+    "Archery": 0.421,
+    "Board Games": 0.28,
+    "Fishing": 0.118,
+    "Sailing": 0.104,
+    "Puzzle Boxes": 0.077
+   }
+  },
+  {
+   "id": 8,
+   "values": {
+    "Astronomy": 0.447,
+    "Running": 0.167,
+    "Puzzle Boxes": 0.16,
+    "Crossword Puzzles": 0.124,
+    "Vinyl Records": 0.103
+   }
+  },
+  {
+   "id": 9,
+   "values": {
+    "Gourmet Coffee": 0.351,
+    "Baking": 0.226,
+    "Quilting": 0.161,
+    "Antique Maps": 0.159,
+    "Yoga": 0.102
+   }
+  },
+  {
+   "id": 10,
+   "values": {
+    "Rock Climbing": 0.243,
+    "Camping": 0.242,
+    "Ballroom Dance": 0.228,
+    "Street Food": 0.192,
+    "Antique Maps": 0.095
+   }
+  },
+  {
+   "id": 11,
+   "values": {
+    "Photography": 0.324,
+    "Street Food": 0.269,
+    "Martial Arts": 0.21,
+    "Puzzle Boxes": 0.099,
+    "Surfing": 0.097
+   }
+  },
+  {
+   "id": 12,
+   "values": {
+    "Painting": 0.266,
+    "Vinyl Records": 0.221,
+    "Table Tennis": 0.18,
+    "Origami": 0.18,
+    "Quilting": 0.152
+   }
+  },
+  {
+   "id": 13,
+   "values": {
+    "Crossword Puzzles": 0.378,
+    "Surfing": 0.188,
+    "Pilates": 0.147,
+    "Podcasts": 0.146,
+    "Baking": 0.141
+   }
+  },
+  {
+   "id": 14,
+   "values": {
+    "Bird Watching": 0.358,
+    "Scuba Diving": 0.187,
+    "Astronomy": 0.167,
+    "Surfing": 0.161,
+    "Travel": 0.127
+   }
+  },
+  {
+   "id": 15,
+   "values": {
+    "Puzzle Boxes": 0.422,
+    "Antique Maps": 0.181,
+    "Typewriters": 0.14,
+    "Gardening": 0.135,
+    "Sailing": 0.122
+   }
+  }
+ ]
+}

@@ -161,8 +161,17 @@ def build_user_prompt(cond: str, dilemma: str, profiles: dict, slot: int) -> str
     return DMP_PROMPT.format(profile=profile_text(profiles[cond][slot]), dilemma=dilemma)
 
 
-def judge():
+def judge(judge_spec: str | None = None):
+    """judge_spec: 'provider:model:tag[:cond1,cond2,...]' — alt judge on a condition subset;
+    default = full grid on claude-haiku."""
     from llm import map_calls
+    provider, model = JUDGE
+    conds, tag = CONDITIONS, ""
+    if judge_spec:
+        parts = judge_spec.split(":")
+        provider, model, tag = parts[0], parts[1], "_" + parts[2]
+        if len(parts) > 3:
+            conds = parts[3].split(",")
     gate = json.loads((OUT / "rewrite_gate.json").read_text())
     assert gate["gate_ok"], f"rewrite gate FAILED (anchored_frac={gate['anchored_frac']})"
     assert (ROOT / "data" / "g0_empirical.json").exists(), "g0_empirical.json missing"
@@ -170,22 +179,21 @@ def judge():
     rewrites = {json.loads(l)["post_id"]: json.loads(l) for l in open(OUT / "rewrites.jsonl")}
     profiles = build_all_profiles()
     (OUT / "profiles.json").write_text(json.dumps(profiles, indent=1))
-    provider, model = JUDGE
     jobs, meta = [], []
     for it in items:
         rw = rewrites[it["post_id"]]
         if not rw["rewrite"] or not rw["anchored"]:
             continue
-        for cond in CONDITIONS:
+        for cond in conds:
             for s in range(N_SAMPLES):
                 jobs.append({"provider": provider, "model": model, "system": "",
                              "user": build_user_prompt(cond, rw["rewrite"], profiles, s),
                              "temperature": 1.0, "max_tokens": 400, "seed": s})
                 meta.append((it["post_id"], cond, s))
-    print(f"{len(jobs)} calls ({len({m[0] for m in meta})} items x {len(CONDITIONS)} conds x {N_SAMPLES})")
-    texts = map_calls(jobs, concurrency=48)
+    print(f"{len(jobs)} calls ({len({m[0] for m in meta})} items x {len(conds)} conds x {N_SAMPLES}) -> judgments{tag}.jsonl")
+    texts = map_calls(jobs, concurrency=48 if provider == "anthropic" else 16)
     n_ok = 0
-    with open(OUT / "judgments.jsonl", "w") as f:
+    with open(OUT / f"judgments{tag}.jsonl", "w") as f:
         for (pid, cond, s), text in zip(meta, texts):
             verdict, rationale = parse_verdict(text or "")
             n_ok += verdict is not None
@@ -326,7 +334,38 @@ def analyze_values():
     print(json.dumps(out, indent=2))
 
 
+def analyze_alt(tag: str):
+    """Compact vanilla/dmp/persona comparison for an alt judge's judgments_<tag>.jsonl."""
+    from geometry import noise_floor_absdiff
+    items = load_items()
+    it_by = {it["post_id"]: it for it in items}
+    rows = [json.loads(l) for l in open(OUT / f"judgments_{tag}.jsonl")]
+    conds = sorted({r["cond"] for r in rows})
+    pids = sorted({r["post_id"] for r in rows})
+    idx = {p: i for i, p in enumerate(pids)}
+    p_h = np.array([float(it_by[p]["p_unacceptable"]) for p in pids])
+    out = {"judge": tag, "n_items": len(pids)}
+    for cond in conds:
+        m = np.full((len(pids), N_SAMPLES), np.nan)
+        for r in rows:
+            if r["cond"] == cond and r["unacceptable"] is not None:
+                m[idx[r["post_id"]], r["sample"]] = r["unacceptable"]
+        pm = np.nanmean(m, axis=1)
+        out[cond] = {"corr_with_human": round(float(np.corrcoef(pm, p_h)[0, 1]), 3),
+                     "mean_abs_diff": round(float(np.mean(np.abs(pm - p_h))), 4),
+                     "within_item_std": round(float(np.nanstd(m, axis=1).mean()), 3),
+                     "parse_ok_frac": round(float(np.mean(~np.isnan(m))), 3)}
+    (OUT / f"summary_{tag}.json").write_text(json.dumps(out, indent=2))
+    print(json.dumps(out, indent=2))
+
+
 if __name__ == "__main__":
     OUT.mkdir(parents=True, exist_ok=True)
-    {"rewrite": rewrite, "judge": judge, "analyze": analyze,
-     "values": extract_values, "analyze_values": analyze_values}[sys.argv[1]]()
+    cmd = sys.argv[1]
+    if cmd == "judge":
+        judge(sys.argv[2] if len(sys.argv) > 2 else None)
+    elif cmd == "analyze_alt":
+        analyze_alt(sys.argv[2])
+    else:
+        {"rewrite": rewrite, "analyze": analyze,
+         "values": extract_values, "analyze_values": analyze_values}[cmd]()
