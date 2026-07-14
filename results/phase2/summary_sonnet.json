@@ -1,0 +1,22 @@
+{
+  "judge": "sonnet",
+  "n_items": 150,
+  "dmp_empirical": {
+    "corr_with_human": 0.554,
+    "mean_abs_diff": 0.3141,
+    "within_item_std": 0.047,
+    "parse_ok_frac": 1.0
+  },
+  "random_persona": {
+    "corr_with_human": 0.561,
+    "mean_abs_diff": 0.3149,
+    "within_item_std": 0.02,
+    "parse_ok_frac": 1.0
+  },
+  "vanilla": {
+    "corr_with_human": 0.551,
+    "mean_abs_diff": 0.3153,
+    "within_item_std": 0.021,
+    "parse_ok_frac": 1.0
+  }
+}

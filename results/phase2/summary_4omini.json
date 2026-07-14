@@ -1,0 +1,22 @@
+{
+  "judge": "4omini",
+  "n_items": 150,
+  "dmp_empirical": {
+    "corr_with_human": 0.32,
+    "mean_abs_diff": 0.4596,
+    "within_item_std": 0.154,
+    "parse_ok_frac": 1.0
+  },
+  "random_persona": {
+    "corr_with_human": 0.373,
+    "mean_abs_diff": 0.416,
+    "within_item_std": 0.171,
+    "parse_ok_frac": 1.0
+  },
+  "vanilla": {
+    "corr_with_human": 0.367,
+    "mean_abs_diff": 0.3745,
+    "within_item_std": 0.107,
+    "parse_ok_frac": 1.0
+  }
+}

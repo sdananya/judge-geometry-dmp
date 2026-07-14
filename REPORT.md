@@ -1,4 +1,64 @@
-# Findings so far (Phase 1 pilot, 2026-07-09)
+# Phase 2 findings (2026-07-14) — the controlled experiment
+
+*Phase 1 (below) found the pattern; Phase 2 adds the controls that make it a claim.
+Design was pre-registered in README before running. Judge = Claude Haiku unless noted;
+150 dilemmas x 16 samples x 6 conditions (14,400 judgments), all on fixed, actor-anchored
+rewrites (100% anchored, invented demographics down to 2%). Cumulative paid spend: **$1.44**.*
+
+## Scoreboard against the pre-registered hypotheses
+
+- **H1 (spread recovers): YES.** Value-profile conditioning triples within-dilemma
+  disagreement (std 0.024 → 0.079–0.085; unanimity 94% → 78%).
+- **H2 (direction rotates toward humans): NO.** Correlation with human verdict rates:
+  vanilla 0.465 → DMP 0.455; bootstrap 95% CI on the difference [−0.075, +0.049] — a zero.
+- **H3 (they dissociate): YES, per the pre-registered rule** (variance ≥2× while the
+  correlation delta CI includes 0). See `figures/phase2_spread-vs-alignment_*.png`.
+- **H4 (contested items improve only if H2 holds): consistent — no real improvement.**
+  Contested-bucket gap 0.487 → 0.460, both ~4× the noise floor (0.11).
+
+## Three results that sharpen "decoration" into a mechanism
+
+1. **Profile content is irrelevant.** Human-fitted values, uniform values, and *shuffled*
+   values (human frequencies scrambled across value names) produce statistically
+   indistinguishable judgment behavior — same variance, same (non-)alignment. Whatever
+   DMP does, it does not transmit information about human values into judgments.
+2. **Random hobby personas do at least as well** — nominally better (corr 0.506 vs 0.455;
+   the paired bootstrap CI on DMP−personas excludes zero at [−0.104, −0.007]). If gardening
+   profiles beat moral-value profiles at "pluralistic alignment," the mechanism is generic
+   perturbation, not values.
+3. **The judge is a mirror.** Expressed value diversity tracks the injected prior almost
+   perfectly (adherence 99–100%): flat prior → diverse rationales (top-10 mass 0.55);
+   concentrated human-fitted prior → *more concentrated than vanilla* (0.86 vs 0.80).
+   Paper A's headline diversity gain is, on this evidence, their prior's flatness passing
+   through the model — see `figures/phase2_top10mass-vs-injected-prior_*.png`.
+
+## Does it generalize beyond Haiku? Yes.
+
+| judge | vanilla → DMP corr with humans | within-item std | verdict |
+|---|---|---|---|
+| Claude Haiku | 0.465 → 0.455 | 0.024 → 0.079 | decoration |
+| Claude Sonnet | 0.551 → 0.554 | 0.021 → 0.047 | decoration |
+| gpt-4o-mini | 0.367 → 0.320 | 0.107 → 0.154 | decoration, mildly harmful |
+
+The spread between judges (0.37 → 0.55) is ~10× larger than any conditioning effect within
+a judge: **capability moves alignment; conditioning moves costume.**
+
+## One more surprise
+
+The "voice one plausible human opinion" instruction — the honest low-tech alternative to
+DMP — *backfired*: it made the judge more unanimous than vanilla (97% vs 94%) and slightly
+less aligned (0.416). Asking a model to sound like an individual apparently collapses it
+onto its single most stereotyped voice.
+
+## Figures
+
+All in `figures/` (provenance footnotes on each): spread-vs-alignment scatter (the
+centerpiece), per-condition correlation bars with CIs, consensus-bucket gaps vs the noise
+floor, and expressed-diversity-vs-injected-prior.
+
+---
+
+# Findings from Phase 1 (pilot, 2026-07-09)
 
 *Written so that someone with no background can follow. Every number sits next to its
 baseline, and every claim says which file it comes from. Total paid-API cost: **$0.52**

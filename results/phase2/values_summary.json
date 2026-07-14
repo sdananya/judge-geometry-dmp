@@ -1,0 +1,35 @@
+{
+  "vanilla": {
+    "n_mentions": 6914,
+    "top10_mass": 0.796,
+    "norm_entropy": 0.756
+  },
+  "dmp_empirical": {
+    "n_mentions": 7062,
+    "top10_mass": 0.857,
+    "norm_entropy": 0.712,
+    "profile_adherence": 1.0
+  },
+  "dmp_uniform": {
+    "n_mentions": 7020,
+    "top10_mass": 0.547,
+    "norm_entropy": 0.867,
+    "profile_adherence": 0.991
+  },
+  "shuffled_g0": {
+    "n_mentions": 7007,
+    "top10_mass": 0.75,
+    "norm_entropy": 0.748,
+    "profile_adherence": 0.991
+  },
+  "random_persona": {
+    "n_mentions": 6982,
+    "top10_mass": 0.802,
+    "norm_entropy": 0.73
+  },
+  "diversity_instruction": {
+    "n_mentions": 6895,
+    "top10_mass": 0.791,
+    "norm_entropy": 0.753
+  }
+}
