@@ -74,6 +74,37 @@ score columns, angles via SVD of Q_Aᵀ·Q_B per Björck & Golub 1973).
 - **Rewrite fix:** the rewriter must always name the narrator "the main actor"; runs are
   gated on ≥95% of rewrites passing the string check plus a 5-item hand-read.
 
+## Phase 3 pre-registration (written 2026-07-14, BEFORE the Phase 3 runs) — paper must-haves
+
+- **Scale & equivalence:** 500 dilemmas (100/consensus-bucket, same Scruples filters, same
+  rewrite gate). Negative claims use TOST equivalence bounds pre-set at **δ = 0.05
+  correlation points** (paired item bootstrap; "no effect" = 95% CI within ±δ). Profile-set
+  sensitivity: dmp_empirical re-run with 2 extra profile-set seeds on the 150-item subset;
+  claim requires consistency across seeds.
+- **Faithful-DMP condition** (Paper A protocol as close as reconstructable): profiles
+  resampled PER dilemma (not fixed), N = 32 samples/dilemma (their judgment count),
+  topic-conditioned G_t ~ Dirichlet(10·G0_t); topics assigned by LLM labeling into ~8
+  categories (their method is unspecified — documented proxy), G0_t fitted per topic from
+  the MattBoraske human-rationale extractions. Council baseline = pooled samples across all
+  vanilla judges, N matched.
+- **New baselines:** (a) **distribution elicitation** — ask the judge directly for the % of
+  people who would judge unacceptable (3 samples, mean); (b) **few-shot elicitation** — same
+  with 8 in-context (dilemma → human %) examples from non-overlapping items; (c)
+  **temperature control** on OpenAI judges at T=1.5 (infeasible on Anthropic, documented).
+- **Judge roster:** full grid on claude-haiku (free); key conditions (vanilla, dmp_empirical,
+  random_persona, elicitation) on claude-sonnet, gpt-4o-mini, gpt-4o, llama-3.3-70b,
+  qwen3-235b, gemma-3-27b. Paid budget cap for all of Phase 3: **$100**; log in spend.jsonl.
+- **Decomposition:** Paper B Sec-4.8 stretch/rotate/residual applied to every condition's
+  per-item delta vs vanilla (base = vanilla direction, human = verdict-rate vector);
+  headline = rotation share, comparable to their fine-tuning ≤3%.
+- **Second domain (crossover):** PARIKSHA 150-item bed; judges conditioned with 16
+  evaluative-priorities profiles (fluency-first / strictness / cultural-context / etc. —
+  taxonomy written before running); metrics = σ-ratio, r95, angle to mean-human vs the
+  3-rater human floor, WITH a matched-variance null (synthetic columns preserving per-item
+  mean/variance). Prediction (H3-crossover): σ recovers, angle does not beat the null.
+- **Primary metric unchanged** (correlation of per-item means with human rates); all |ΔP|
+  vs noise floor; every rate with CIs.
+
 **Known measurement trap (pre-registered):** with ~32 judgments per side, the per-item
 |ΔP(acceptable)| metric has a noise floor of ~0.10 at 50/50 items even under PERFECT alignment.
 Every distributional result must be reported as excess above this analytic floor
