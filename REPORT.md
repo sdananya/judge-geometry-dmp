@@ -40,7 +40,7 @@ Elicitation also transfers: gpt-4o corr 0.481→0.553, llama-70b 0.425→0.450.
 DMP is null on gpt-4o (0.481→0.469), harmful on llama-70b (0.425→0.368) — as it was on
 gpt-4o-mini. The all-judge vanilla council reaches 0.506 on the 150-subset, *below*
 Sonnet alone (0.551): pooling weaker judges dilutes the best one, again capability > 
-everything. (Still missing, stream stopped twice: qwen-235b, gemma-27b, T=1.5 control.)
+everything. Full roster now in: qwen-235b 0.517→0.471 (DMP harmful), gemma-27b 0.409→0.400 (null), T=1.5 control raises spread 0.107→0.144 with corr unmoved (0.367→0.384); elicitation helps strong judges, hurts gemma (0.409→0.286); 7-judge council 0.521 < sonnet 0.551.
 
 ## Second domain (PARIKSHA crossover, must-have 6)
 

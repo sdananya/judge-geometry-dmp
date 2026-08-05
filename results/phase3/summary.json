@@ -131,6 +131,12 @@
     "dmp_empirical_seedC": 0.453
   },
   "alt_judges": {
+    "gemma27b": {
+      "vanilla": 0.409,
+      "dmp_empirical": 0.4,
+      "random_persona": 0.398,
+      "elicit": 0.286
+    },
     "gpt4o": {
       "vanilla": 0.481,
       "dmp_empirical": 0.469,
@@ -142,10 +148,20 @@
       "dmp_empirical": 0.368,
       "random_persona": 0.414,
       "elicit": 0.45
+    },
+    "qwen235b": {
+      "vanilla": 0.517,
+      "dmp_empirical": 0.471,
+      "random_persona": 0.492,
+      "elicit": 0.529
     }
   },
+  "temp_control_gpt4omini_T1.5": {
+    "corr": 0.384,
+    "within_item_std": 0.144
+  },
   "council_vanilla_all_judges": {
-    "corr": 0.506,
+    "corr": 0.521,
     "judges_pooled": "all files with vanilla"
   }
 }
