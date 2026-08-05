@@ -1,0 +1,27 @@
+{
+  "dmp_empirical": {
+    "stretch": 0.1013,
+    "rotate": 0.0076,
+    "residual": 0.8911
+  },
+  "dmp_uniform": {
+    "stretch": 0.1059,
+    "rotate": 0.0093,
+    "residual": 0.8847
+  },
+  "shuffled_g0": {
+    "stretch": 0.1088,
+    "rotate": 0.0198,
+    "residual": 0.8713
+  },
+  "random_persona": {
+    "stretch": 0.0915,
+    "rotate": 0.0483,
+    "residual": 0.8601
+  },
+  "diversity_instruction": {
+    "stretch": 0.0296,
+    "rotate": 0.0013,
+    "residual": 0.9691
+  }
+}
