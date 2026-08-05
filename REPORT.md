@@ -1,3 +1,57 @@
+# Phase 3 findings (2026-07-14) — paper must-haves, n=500
+
+*Pre-registered (README Phase 3 section) before running. 500 dilemmas, 100 per consensus
+bucket; ~56k judgments on the free lane + 5-judge roster; TOST equivalence bound δ=0.05.*
+
+## The negative is now a formal equivalence, not a wide null
+
+Every persona-style conditioning method is **statistically equivalent to doing nothing**
+on the primary metric (95% CI inside ±0.05 correlation points):
+
+| condition vs vanilla (corr 0.431) | Δ corr | 95% CI | TOST-equivalent |
+|---|---|---|---|
+| DMP, fixed profiles | −0.013 | [−0.049, +0.023] | **YES** |
+| **DMP, faithful to Paper A** (per-item resampled, topic-conditioned, N=32) | −0.008 | [−0.045, +0.027] | **YES** |
+| scrambled-G0 profiles | −0.002 | [−0.041, +0.037] | **YES** |
+| random hobby personas | +0.008 | [−0.033, +0.049] | **YES** |
+
+The faithful-DMP row removes the "you didn't run their method" objection. Profile-set
+reseeds agree (0.460 / 0.453 vs 0.455). Rotation share stays ≤2% for every persona
+condition (Paper B's fine-tuning: ≤3%).
+
+## The constructive result: just ask for the distribution
+
+Asking the judge directly — "what percentage of people would call this unacceptable?" —
+beats every persona method at distribution matching by a wide margin:
+
+| | mean gap to human distribution (floor 0.085) |
+|---|---|
+| all sampling/persona conditions | 0.36–0.37 |
+| **direct elicitation** | **0.215** |
+| **elicitation + 8 human examples** | **0.200** (and best corr of anything: 0.494) |
+
+Mechanism (decomposition): elicitation's change is ~85% *stretch* — recalibrating
+magnitudes along the judge's existing direction — with ~1% rotation. So: **capability sets
+the direction, personas add costume, elicitation fixes calibration.** Nobody rotates.
+Elicitation also transfers: gpt-4o corr 0.481→0.553, llama-70b 0.425→0.450.
+
+## Roster + council
+
+DMP is null on gpt-4o (0.481→0.469), harmful on llama-70b (0.425→0.368) — as it was on
+gpt-4o-mini. The all-judge vanilla council reaches 0.506 on the 150-subset, *below*
+Sonnet alone (0.551): pooling weaker judges dilutes the best one, again capability > 
+everything. (Still missing, stream stopped twice: qwen-235b, gemma-27b, T=1.5 control.)
+
+## Second domain (PARIKSHA crossover, must-have 6)
+
+On Paper B's own public data, priority-profile conditioning **doubles** ensemble spread
+(0.057→0.112) while the subspace angle lands at the **13.5th percentile of a
+matched-variance noise null** — no rotation beyond what noise buys. 7 of 8 hand-read
+conditioned transcripts score identically to their same-seed vanilla runs.
+`results/pariksha_crossover/NOTE.md`.
+
+---
+
 # Phase 2 findings (2026-07-14) — the controlled experiment
 
 *Phase 1 (below) found the pattern; Phase 2 adds the controls that make it a claim.
