@@ -21,7 +21,10 @@ Would you be willing to share, for research use:
    ethics section suggests the retellings were designed to be shareable);
 2. the dilemma→topic assignments (the topic-assignment procedure isn't described in the paper);
 3. if possible, the per-dilemma 60-value distributions, and which LLM(s) produced the headline
-   DMP result in Section 6.
+   DMP result in Section 6;
+4. a sample of raw model outputs (rationales) from the DMP condition — we are studying how
+   conditioned judges use their profiles in rationales, and even a few dozen transcripts
+   would let us compare directly.
 
 Happy to sign a data-use agreement, and to share our results (we're testing whether DMP's
 gains reflect genuinely human-like judgment structure using subspace-geometry diagnostics —
